@@ -14,7 +14,7 @@ interface propsTextInput {
 }
 
 
-const BasicTextFields: React.FC<propsTextInput> = ({ type, id, label, variant, onChange, value, className, placeholder }) => {
+const BasicTextField: React.FC<propsTextInput> = ({ type, id, label, variant, onChange, value, className, placeholder }) => {
     return (
         <TextField placeholder={placeholder} id={id} type={type} label={label} variant={variant} sx={className} onChange={onChange} />
     );
@@ -37,4 +37,9 @@ const Checkboxes: React.FC<propsCheckbox> = ({ defaultChecked, checked, onChange
             <label>{label}</label>
         </div>
     );
+}
+
+export default {
+    Checkboxes,
+    BasicTextField
 }
