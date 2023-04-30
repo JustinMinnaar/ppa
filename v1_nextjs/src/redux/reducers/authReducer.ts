@@ -49,21 +49,21 @@ export const authSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(login.pending, (state:AuthState) => {
+            .addCase(loginThunk.pending, (state:AuthState) => {
                 state.status = 'loading';
             })
-            .addCase(login.fulfilled, (state:AuthState, action) => {
+            .addCase(loginThunk.fulfilled, (state:AuthState, action :any) => {
                 state.status = 'succeeded';
                 state.user = action.payload;
                 state.status = 'fulfilled'
             })
-            .addCase(login.rejected, (state:AuthState, action) => {
+            .addCase(loginThunk.rejected, (state:AuthState, action :any) => {
                 state.status = 'rejected';
                 state.error = action.payload as string;
             });
     },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { logout } = authSlice.actions;
 
 export default authSlice.reducer;
