@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     padding:50px;
-    transform: translate(0, 45%);
+    transform: translate(0, 35%);
     margin:auto;
     background-color: rgba(255, 255, 255);
     border-radius: 14px;
@@ -21,4 +21,27 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     text-transform: capitalize;
+}
+
+.linksContainer{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.linksContainer > p {
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.linksContainer > p:hover {
+    color: dodgerblue;
+}
+
+.linksContainer > p:active {
+    color: rgba(0,212,255,1);
+    transform: scale(0.8);
 }

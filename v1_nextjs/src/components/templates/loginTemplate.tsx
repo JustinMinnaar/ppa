@@ -66,6 +66,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
             <InputAtoms.BasicTextField style={styles.formTextInputs} type="password" id="password" label="Password" variant="outlined" value={password} onChange={handlePasswordChange} />
             <InputAtoms.Checkboxes containerStyle={styles.checkbox} checked={checked} onChange={handleChecked} label="Remember me" />
             <BasicButtons style={styles.formButton} type={'submit'} variant="contained">Sign In</BasicButtons>
+            <div className={styling.linksContainer}>
+                <p>
+                    Register
+                </p>
+                <p>
+                    forgot password?
+                </p>
+            </div>
         </form>
     );
 }

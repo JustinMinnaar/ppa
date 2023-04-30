@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
-import { CookieStorage } from 'redux-persist-cookie-storage'
+import  {CookieStorage}  from 'redux-persist-cookie-storage'
 import Cookies from 'js-cookie';
 import rootReducer, { RootState } from './reducers/index';
 
